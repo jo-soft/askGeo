@@ -1,0 +1,21 @@
+version: "3"
+services:
+        backend:
+                build: backend
+                command: python -u app/app.py
+                ports:
+                        - "5000:5000"
+                volumes:
+                        - .:/app
+                links:
+                        - mongodb:database
+                        - redis:redis
+                volumes:
+                  - ./backend:/askGeo
+                restart: always 
+        mongodb:
+                image: mongo:3.0.2
+                volumes:
+                  - ./mongoDb:/data/db
+        redis:
+                image: redis
