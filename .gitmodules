@@ -4,3 +4,6 @@
 [submodule "homepage"]
 	path = homepage
 	url = ./homepage/
+[submodule "hitchhikers_guide"]
+	path = hitchhikers_guide
+	url = ./hitchhikers_guide/
